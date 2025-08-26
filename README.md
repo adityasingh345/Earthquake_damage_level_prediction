@@ -1,0 +1,2 @@
+# Earthquake_damage_level_prediction
+deployed on streamlit
