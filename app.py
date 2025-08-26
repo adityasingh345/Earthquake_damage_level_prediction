@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 import pandas as pd
 import numpy as np
-import plotly.express as px
+
 
 with open("models/xgbc_model.pkl", "rb") as f:
     xgbc_model = pickle.load(f)
@@ -98,6 +98,7 @@ features = np.array(features).reshape(1, -1)
 if st.button("Predict Damage Level"):
     prediction = xgbc_model.predict(features)
     st.success(f"Predicted Damage Level: {prediction[0]}")
+
 
 
 
